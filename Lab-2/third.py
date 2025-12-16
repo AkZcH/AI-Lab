@@ -1,4 +1,4 @@
-#wap to find the degree of all vertices from adjacency metrix and list
+#wap to find the degree of all vertices from adjacency matrix and list
 
 def degree_list(adj_list):
     for i in range(len(adj_list)):
