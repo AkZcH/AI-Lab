@@ -1,4 +1,4 @@
-//path finding using DFS. Using stack
+# path finding using DFS. Using stack
 
 def find_path_dfs(grid, start, end):
 

@@ -64,8 +64,8 @@ if __name__ == "__main__":
         [0, 0, 1, 0, 0],
         [0, 0, 0, 0, 2]
     ]
-    start_pos = (0, 0)
-    goal_pos = (4, 4)
+    start_pos = tuple(map(int, input("Enter start position (row,col): ").split(',')))
+    goal_pos = tuple(map(int, input("Enter goal position (row,col): ").split(',')))
     
     # Find the path
     path = best_first_search(grid, start_pos, goal_pos)
@@ -77,12 +77,5 @@ if __name__ == "__main__":
     else:
         print("Treasure not found.")
 
-    print("\n--- Heuristic Performance Analysis ---")
-    print("The Best-First Search algorithm uses a heuristic function to estimate the 'closeness' of a cell to the treasure.")
-    print("In this implementation, we use the Manhattan distance: h(n) = |x1 - x2| + |y1 - y2|.")
-    print("\nHow heuristic choice affects performance:")
-    print("1. Completeness: Best-First Search is not complete. A poor heuristic can lead it down an infinite path or a path that doesn't lead to the goal, even if one exists.")
-    print("2. Optimality: It is not optimal. It follows a greedy approach, always choosing the most promising cell based on the heuristic. This might not result in the shortest path.")
-    print("3. Time and Space Complexity: The worst-case time and space complexity is O(b^m), where 'b' is the branching factor and 'm' is the maximum depth. However, a good heuristic can significantly reduce the search space, improving performance by guiding the search more directly towards the goal.")
-    print("\nThe Manhattan distance is a good heuristic for a grid when movement is restricted to four directions (up, down, left, right) because it accurately represents the minimum number of moves to reach the goal, ignoring any obstacles.")
+
 
